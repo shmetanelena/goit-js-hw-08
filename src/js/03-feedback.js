@@ -28,6 +28,9 @@ form.addEventListener(
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+  if (email.value === '' || message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
   console.log(getFormValues());
   form.reset();
   localStorage.clear();
